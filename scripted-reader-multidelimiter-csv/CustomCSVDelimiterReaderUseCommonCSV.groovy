@@ -87,7 +87,7 @@ class CSVMultiDelimiterReader implements RecordReader {
         return schema
     }
 
-    // custom function might usefull handling anomaly value
+    // custom function might useful handling anomaly value
     private boolean isValidId(String id) {
         try {
             id.toInteger()

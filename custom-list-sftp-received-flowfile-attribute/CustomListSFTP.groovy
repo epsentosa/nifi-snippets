@@ -238,9 +238,9 @@ class ListSFTPCustomProcessor implements Processor {
         for (final FileInfo entity : entities) {
             // Create the FlowFile for this path.
             final Map<String, String> attributes = createAttributes(entity, context, flowFile)
-            FlowFile newFlowFlie = session.create()
-            newFlowFlie = session.putAllAttributes(newFlowFlie, attributes)
-            session.transfer(newFlowFlie, REL_SUCCESS)
+            FlowFile newFlowFile = session.create()
+            newFlowFile = session.putAllAttributes(newFlowFile, attributes)
+            session.transfer(newFlowFile, REL_SUCCESS)
         }
     }
 

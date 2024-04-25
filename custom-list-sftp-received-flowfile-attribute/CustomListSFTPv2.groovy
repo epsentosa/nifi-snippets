@@ -81,7 +81,7 @@ class ListSFTPCustomV2Processor implements Processor {
         int port = 22
         String username = flowFile.getAttribute('username')
         String password = flowFile.getAttribute('password')
-        String remotePath = "/home/nssapp/ftptest/radio/"
+        String remotePath =flowFile.getAttribute('file_path') 
         // Initialize SSH client
         SSHClient sshClient = new SSHClient()
         sshClient.addHostKeyVerifier(new PromiscuousVerifier())
